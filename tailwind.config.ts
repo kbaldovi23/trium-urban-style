@@ -51,6 +51,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        trium: {
+          gold: "hsl(var(--trium-gold))",
+          "gold-dark": "hsl(var(--trium-gold-dark))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
