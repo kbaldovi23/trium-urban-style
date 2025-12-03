@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Calendar, ChevronDown } from "lucide-react";
+import { Calendar, ChevronDown, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroLogoBg from "@/assets/hero-logo-bg.png";
+import heroVideo from "@/assets/hero-video.mp4";
 
 export function Hero() {
   return (
@@ -9,15 +9,22 @@ export function Hero() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Overlay */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroLogoBg}
-          alt="TRIUM Logo Background"
-          className="w-full h-full object-contain"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
-        <div className="absolute inset-0 noise-overlay" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        {/* Overlay gradients */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/80" />
+        {/* Gold accent glow */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px] pointer-events-none" />
       </div>
 
       {/* Content */}
@@ -28,7 +35,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="inline-block text-sm md:text-base font-medium tracking-[0.3em] uppercase text-muted-foreground mb-6">
+            <span className="inline-flex items-center gap-2 text-sm md:text-base font-medium tracking-[0.3em] uppercase text-primary mb-6 px-4 py-2 rounded-full border border-primary/30 bg-primary/5">
+              <Play size={14} className="fill-primary" />
               Magangué • Bolívar
             </span>
           </motion.div>
@@ -69,7 +77,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="hero" size="xl">
+            <Button variant="hero" size="xl" className="shadow-[0_0_30px_hsla(45,100%,51%,0.3)]">
               <Calendar size={20} />
               Reserva tu cita
             </Button>
@@ -90,7 +98,7 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-2 text-muted-foreground"
+          className="flex flex-col items-center gap-2 text-primary"
         >
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <ChevronDown size={20} />
