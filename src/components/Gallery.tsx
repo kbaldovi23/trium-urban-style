@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
-import gallery1 from "@/assets/gallery-1.png";
+import galleryVideo1 from "@/assets/gallery-video-1.mp4";
 import gallery2 from "@/assets/gallery-2.png";
-import gallery3 from "@/assets/gallery-3.png";
+import galleryVideo3 from "@/assets/gallery-video-3.mp4";
 
-const galleryImages = [
-  { src: gallery1, alt: "TRIUM corte 1" },
-  { src: gallery2, alt: "TRIUM corte 2" },
-  { src: gallery3, alt: "TRIUM corte 3" },
+type GalleryItem = {
+  type: "image" | "video";
+  src: string;
+  alt: string;
+};
+
+const galleryItems: GalleryItem[] = [
+  { type: "video", src: galleryVideo1, alt: "TRIUM corte 1" },
+  { type: "image", src: gallery2, alt: "TRIUM corte 2" },
+  { type: "video", src: galleryVideo3, alt: "TRIUM corte 3" },
 ];
 
 const containerVariants = {
@@ -58,19 +64,30 @@ export function Gallery() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {galleryImages.map((image, index) => (
+          {galleryItems.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               className="image-hover group relative"
             >
               <div className="aspect-[4/5] overflow-hidden rounded-xl bg-card">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+                {item.type === "video" ? (
+                  <video
+                    src={item.src}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  />
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                )}
               </div>
             </motion.div>
           ))}
