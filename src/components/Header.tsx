@@ -38,7 +38,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#inicio" className="flex items-center">
-            <img src={logo} alt="TRIUM Logo" className="h-10 w-auto" />
+            <img src={logo} alt="TRIUM Logo" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

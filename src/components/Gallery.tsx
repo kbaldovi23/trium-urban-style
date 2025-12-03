@@ -1,18 +1,12 @@
 import { motion } from "framer-motion";
-import haircut1 from "@/assets/haircut-1.jpg";
-import haircut2 from "@/assets/haircut-2.jpg";
-import haircut3 from "@/assets/haircut-3.jpg";
-import barber1 from "@/assets/barber-1.jpg";
-import tshirt1 from "@/assets/tshirt-1.png";
-import granizado2 from "@/assets/granizado-2.jpg";
+import gallery1 from "@/assets/gallery-1.png";
+import gallery2 from "@/assets/gallery-2.png";
+import gallery3 from "@/assets/gallery-3.png";
 
 const galleryImages = [
-  { src: haircut1, alt: "Fade haircut", category: "Barbería" },
-  { src: tshirt1, alt: "TRIUM T-shirt", category: "Boutique" },
-  { src: haircut2, alt: "Classic haircut", category: "Barbería" },
-  { src: granizado2, alt: "Blue granizado", category: "Granizados" },
-  { src: haircut3, alt: "Modern style", category: "Barbería" },
-  { src: barber1, alt: "Barber at work", category: "Barbería" },
+  { src: gallery1, alt: "TRIUM corte 1" },
+  { src: gallery2, alt: "TRIUM corte 2" },
+  { src: gallery3, alt: "TRIUM corte 3" },
 ];
 
 const containerVariants = {
@@ -56,35 +50,27 @@ export function Gallery() {
           </p>
         </motion.div>
 
-        {/* Gallery Grid - Masonry-like */}
+        {/* Gallery Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-4"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
           {galleryImages.map((image, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`image-hover group relative ${
-                index === 0 || index === 5 ? "row-span-2" : ""
-              }`}
+              className="image-hover group relative"
             >
-              <div className={`${index === 0 || index === 5 ? "aspect-[3/5]" : "aspect-square"} overflow-hidden rounded-xl bg-card`}>
+              <div className="aspect-[4/5] overflow-hidden rounded-xl bg-card">
                 <img
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
-              </div>
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
-                <span className="text-sm font-medium text-foreground px-4 py-2 rounded-full border border-border">
-                  {image.category}
-                </span>
               </div>
             </motion.div>
           ))}
