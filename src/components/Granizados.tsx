@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import granizado1 from "@/assets/granizado-1.jpg";
 import granizado2 from "@/assets/granizado-2.jpg";
 import granizado3 from "@/assets/granizado-3.jpg";
+import granizadosPromo from "@/assets/granizados-promo.mp4";
 
 const granizados = [
   {
@@ -114,12 +115,32 @@ export function Granizados() {
           ))}
         </motion.div>
 
-        {/* CTA */}
+        {/* Promo Video */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 max-w-2xl mx-auto"
+        >
+          <div className="rounded-2xl overflow-hidden border border-border/20 shadow-2xl">
+            <video
+              src={granizadosPromo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto"
+            />
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center mt-12"
         >
           <p className="text-muted-foreground mb-4">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-barbershop.jpg";
+import heroLogoBg from "@/assets/hero-logo-bg.png";
 
 export function Hero() {
   return (
@@ -12,9 +12,9 @@ export function Hero() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
-          alt="TRIUM Barbershop Interior"
-          className="w-full h-full object-cover"
+          src={heroLogoBg}
+          alt="TRIUM Logo Background"
+          className="w-full h-full object-contain"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
         <div className="absolute inset-0 noise-overlay" />
@@ -50,7 +50,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-xl md:text-2xl text-muted-foreground mb-4 tracking-wide"
           >
-            Barbería • Boutique • Granizados
+            Barbería • Boutique
           </motion.p>
 
           <motion.p
