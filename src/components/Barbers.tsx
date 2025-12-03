@@ -122,9 +122,11 @@ export function Barbers() {
                     </span>
                   ))}
                 </div>
-                <Button variant="urban" className="w-full">
-                  <Calendar size={16} />
-                  Reservar con {barber.name.split(" ")[0]}
+                <Button variant="urban" className="w-full" asChild>
+                  <a href={`https://wa.me/573001234567?text=Hola!%20Quiero%20agendar%20una%20cita%20con%20${encodeURIComponent(barber.name)}%20en%20TRIUM`} target="_blank" rel="noopener noreferrer">
+                    <Calendar size={16} />
+                    Reservar con {barber.name.split(" ")[0]}
+                  </a>
                 </Button>
               </div>
             </motion.div>

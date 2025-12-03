@@ -77,9 +77,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="hero" size="xl" className="shadow-[0_0_30px_hsla(45,100%,51%,0.3)]">
-              <Calendar size={20} />
-              Reserva tu cita
+            <Button variant="hero" size="xl" className="shadow-[0_0_30px_hsla(45,100%,51%,0.3)]" asChild>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20agendar%20una%20cita%20en%20TRIUM" target="_blank" rel="noopener noreferrer">
+                <Calendar size={20} />
+                Reserva tu cita
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" asChild>
               <a href="#servicios">Ver servicios</a>

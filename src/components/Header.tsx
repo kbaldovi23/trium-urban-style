@@ -64,9 +64,11 @@ export function Header() {
             >
               <Instagram size={20} />
             </a>
-            <Button variant="hero" size="lg">
-              <Calendar size={18} />
-              Reserva tu cita
+            <Button variant="hero" size="lg" asChild>
+              <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20agendar%20una%20cita%20en%20TRIUM" target="_blank" rel="noopener noreferrer">
+                <Calendar size={18} />
+                Reserva tu cita
+              </a>
             </Button>
           </div>
 
@@ -101,9 +103,11 @@ export function Header() {
                   {item.name}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4 w-full">
-                <Calendar size={18} />
-                Reserva tu cita
+              <Button variant="hero" size="lg" className="mt-4 w-full" asChild>
+                <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20agendar%20una%20cita%20en%20TRIUM" target="_blank" rel="noopener noreferrer">
+                  <Calendar size={18} />
+                  Reserva tu cita
+                </a>
               </Button>
             </nav>
           </motion.div>
