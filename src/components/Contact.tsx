@@ -14,7 +14,7 @@ export function Contact() {
     e.preventDefault();
     const whatsappMessage = `Hola! Soy ${formData.name}. ${formData.message}. Mi teléfono es ${formData.phone}`;
     window.open(
-      `https://wa.me/573001234567?text=${encodeURIComponent(whatsappMessage)}`,
+      `https://wa.me/573246511522?text=${encodeURIComponent(whatsappMessage)}`,
       "_blank"
     );
   };
@@ -81,7 +81,7 @@ export function Contact() {
                   Teléfono
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  +57 300 123 4567
+                  +57 324 651 1522
                 </p>
               </div>
 
@@ -111,7 +111,7 @@ export function Contact() {
               </div>
               <Button variant="whatsapp" className="w-full" size="lg" asChild>
                 <a
-                  href="https://wa.me/573001234567?text=Hola!%20Quiero%20reservar%20una%20cita"
+                  href="https://wa.me/573246511522?text=Hola!%20Quiero%20reservar%20una%20cita"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
