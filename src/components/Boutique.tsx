@@ -106,7 +106,7 @@ export function Boutique() {
                   </p>
                   <Button variant="whatsapp" className="w-full" asChild>
                     <a
-                      href="https://wa.me/573001234567?text=Hola!%20Me%20interesa%20consultar%20disponibilidad%20de%20la%20camiseta"
+                      href={`https://wa.me/573246511522?text=Hola!%20Me%20interesa%20consultar%20disponibilidad%20de%20${encodeURIComponent(product.name)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
