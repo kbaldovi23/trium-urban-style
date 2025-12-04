@@ -8,7 +8,7 @@ const services = [
     title: "Barbería Profesional",
     description:
       "Cortes de precisión, fades perfectos y diseños personalizados. Nuestros barberos expertos te darán el look que buscas.",
-    href: "#barberos",
+    href: "#precios-barberia",
   },
   {
     icon: Shirt,
