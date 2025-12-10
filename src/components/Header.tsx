@@ -57,7 +57,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://www.instagram.com/triumboutique/"
+              href="https://www.instagram.com/trium.official/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
