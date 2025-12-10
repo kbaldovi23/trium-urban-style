@@ -7,19 +7,19 @@ const prices = [
     icon: Scissors,
     name: "Corte de Cabello Sencillo",
     description: "Corte clásico con técnica profesional",
-    price: 15000,
+    price: 16000,
   },
   {
     icon: Sparkles,
     name: "Corte + Mascarilla",
     description: "Corte profesional con tratamiento capilar hidratante",
-    price: 20000,
+    price: 35000,
   },
   {
     icon: Crown,
     name: "Corte + Mascarilla + Barba",
     description: "Experiencia completa de barbería premium",
-    price: 30000,
+    price: 40000,
   },
 ];
 
