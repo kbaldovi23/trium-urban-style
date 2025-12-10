@@ -133,7 +133,7 @@ export function Boutique() {
           </p>
           <Button variant="heroOutline" size="lg" asChild>
             <a
-              href="https://www.instagram.com/triumboutique/"
+              href="https://www.instagram.com/trium.official/"
               target="_blank"
               rel="noopener noreferrer"
             >
